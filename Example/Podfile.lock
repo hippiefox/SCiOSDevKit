@@ -1,5 +1,7 @@
 PODS:
-  - SCiOSDevKit (0.1.0)
+  - SCiOSDevKit (0.2.0):
+    - SCiOSDevKit/BaseUtil (= 0.2.0)
+  - SCiOSDevKit/BaseUtil (0.2.0)
 
 DEPENDENCIES:
   - SCiOSDevKit (from `../`)
@@ -9,8 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SCiOSDevKit: c63435a7659356c1f75b7f3660fd6534f7c4f8a4
+  SCiOSDevKit: 736c503b63475ee9bcbe6e629cae02c3d20d5951
 
-PODFILE CHECKSUM: 1c9cab81c2f7c287aa8aef699bdb27c1d43fe230
+PODFILE CHECKSUM: 445259bd4962ee35532b87213bd822164953b995
 
 COCOAPODS: 1.11.3
