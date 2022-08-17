@@ -1,0 +1,6 @@
+framework module Pods_SCiOSDevKit_Tests {
+  umbrella header "Pods-SCiOSDevKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

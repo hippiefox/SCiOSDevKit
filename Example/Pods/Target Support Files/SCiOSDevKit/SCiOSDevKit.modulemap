@@ -1,0 +1,6 @@
+framework module SCiOSDevKit {
+  umbrella header "SCiOSDevKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

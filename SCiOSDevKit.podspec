@@ -21,14 +21,13 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Simon Chow/SCiOSDevKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/hippiefox/SCiOSDevKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Simon Chow' => 'foxhippie5@gmail.com' }
-  s.source           = { :git => 'https://github.com/Simon Chow/SCiOSDevKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/hippiefox/SCiOSDevKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'SCiOSDevKit/Classes/**/*'
   

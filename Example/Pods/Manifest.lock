@@ -1,0 +1,16 @@
+PODS:
+  - SCiOSDevKit (0.1.0)
+
+DEPENDENCIES:
+  - SCiOSDevKit (from `../`)
+
+EXTERNAL SOURCES:
+  SCiOSDevKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SCiOSDevKit: c63435a7659356c1f75b7f3660fd6534f7c4f8a4
+
+PODFILE CHECKSUM: 1c9cab81c2f7c287aa8aef699bdb27c1d43fe230
+
+COCOAPODS: 1.11.3

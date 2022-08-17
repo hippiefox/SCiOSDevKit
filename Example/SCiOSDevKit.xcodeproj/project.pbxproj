@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		010425FF5B48AA7E85FF8F0D /* Pods-SCiOSDevKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCiOSDevKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-SCiOSDevKit_Tests/Pods-SCiOSDevKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		125442530B9AD700552823FD /* Pods-SCiOSDevKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCiOSDevKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SCiOSDevKit_Tests/Pods-SCiOSDevKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3C27309A7559633E50D5BDD1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3C27309A7559633E50D5BDD1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5BDD50D32EFBA1D837F0E847 /* Pods-SCiOSDevKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCiOSDevKit_Example.release.xcconfig"; path = "Target Support Files/Pods-SCiOSDevKit_Example/Pods-SCiOSDevKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SCiOSDevKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCiOSDevKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,9 +43,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7D18B7B14ABEF9D41D200B39 /* Pods_SCiOSDevKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCiOSDevKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2EF7E528A73073B36536B77 /* SCiOSDevKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SCiOSDevKit.podspec; path = ../SCiOSDevKit.podspec; sourceTree = "<group>"; };
+		A2EF7E528A73073B36536B77 /* SCiOSDevKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SCiOSDevKit.podspec; path = ../SCiOSDevKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5DD70CC00E331EFE3D40AD6 /* Pods_SCiOSDevKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCiOSDevKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFEFBB0AD16DAC39D13F5FC2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DFEFBB0AD16DAC39D13F5FC2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FF81B1463EE04625FCA467FB /* Pods-SCiOSDevKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCiOSDevKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-SCiOSDevKit_Example/Pods-SCiOSDevKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +147,6 @@
 				125442530B9AD700552823FD /* Pods-SCiOSDevKit_Tests.debug.xcconfig */,
 				010425FF5B48AA7E85FF8F0D /* Pods-SCiOSDevKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = C3VA3CAX8U;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = C3VA3CAX8U;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -478,7 +480,9 @@
 			baseConfigurationReference = FF81B1463EE04625FCA467FB /* Pods-SCiOSDevKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C3VA3CAX8U;
 				INFOPLIST_FILE = SCiOSDevKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -493,7 +497,9 @@
 			baseConfigurationReference = 5BDD50D32EFBA1D837F0E847 /* Pods-SCiOSDevKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C3VA3CAX8U;
 				INFOPLIST_FILE = SCiOSDevKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -507,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 125442530B9AD700552823FD /* Pods-SCiOSDevKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C3VA3CAX8U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 010425FF5B48AA7E85FF8F0D /* Pods-SCiOSDevKit_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C3VA3CAX8U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
