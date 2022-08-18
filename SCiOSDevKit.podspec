@@ -27,7 +27,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/hippiefox/SCiOSDevKit.git', :tag => s.version.to_s }
   s.ios.deployment_target = '12.0'
   s.swift_version       = '5.0'
-  s.source_files = 'SCiOSDevKit/Classes/*'
+  s.source_files = 'SCiOSDevKit/Classes/**/*'
   
   # s.resource_bundles = {
   #   'SCiOSDevKit' => ['SCiOSDevKit/Assets/*.png']
@@ -51,11 +51,6 @@ TODO: Add long description of the pod here.
         ee.source_files = 'SCiOSDevKit/Classes/Extensions/*'
     end
     
-    s.subspec 'Controller' do |cc|
-        cc.source_files = 'SCiOSDevKit/Classes/Controller/*'
-    end
-
-
     
   
 end
