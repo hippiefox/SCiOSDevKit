@@ -19,11 +19,36 @@
     "ios": "12.0"
   },
   "swift_versions": "5.0",
-  "source_files": "SCiOSDevKit/Classes/**/*",
+  "source_files": "SCiOSDevKit/Classes/*",
   "subspecs": [
     {
       "name": "BaseUtil",
-      "source_files": "Base/*"
+      "source_files": "SCiOSDevKit/Classes/Base/*",
+      "dependencies": {
+        "KeychainAccess": [
+          "~> 4.2.1"
+        ]
+      }
+    },
+    {
+      "name": "Widget",
+      "source_files": "SCiOSDevKit/Classes/Widget/*",
+      "dependencies": {
+        "SCiOSDevKit/BaseUtil": [
+
+        ],
+        "SnapKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "Extensions",
+      "source_files": "SCiOSDevKit/Classes/Extensions/*"
+    },
+    {
+      "name": "Controller",
+      "source_files": "SCiOSDevKit/Classes/Controller/*"
     }
   ],
   "swift_version": "5.0"

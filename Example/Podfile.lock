@@ -1,18 +1,36 @@
 PODS:
+  - KeychainAccess (4.2.2)
   - SCiOSDevKit (0.2.0):
     - SCiOSDevKit/BaseUtil (= 0.2.0)
-  - SCiOSDevKit/BaseUtil (0.2.0)
+    - SCiOSDevKit/Controller (= 0.2.0)
+    - SCiOSDevKit/Extensions (= 0.2.0)
+    - SCiOSDevKit/Widget (= 0.2.0)
+  - SCiOSDevKit/BaseUtil (0.2.0):
+    - KeychainAccess (~> 4.2.1)
+  - SCiOSDevKit/Controller (0.2.0)
+  - SCiOSDevKit/Extensions (0.2.0)
+  - SCiOSDevKit/Widget (0.2.0):
+    - SCiOSDevKit/BaseUtil
+    - SnapKit
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
   - SCiOSDevKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - KeychainAccess
+    - SnapKit
 
 EXTERNAL SOURCES:
   SCiOSDevKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SCiOSDevKit: 736c503b63475ee9bcbe6e629cae02c3d20d5951
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  SCiOSDevKit: 57a97fd4a701356b08798606d18aadf88810e033
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 445259bd4962ee35532b87213bd822164953b995
+PODFILE CHECKSUM: 1479f876f0c6afd08ce215050318de02c23ca55d
 
 COCOAPODS: 1.11.3

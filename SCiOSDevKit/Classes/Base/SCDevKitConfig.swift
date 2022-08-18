@@ -12,6 +12,7 @@ public class SCDevKitConfig: NSObject{
     
     public var nav_bg_color = UIColor.white
     public var nav_bg_alpha: CGFloat = 1
+    public var nav_back_image: UIImage?
     
     public var nav_title_color: UIColor = .black
     public var nav_title_font = UIFont.systemFont(ofSize: 18)
@@ -27,5 +28,25 @@ public class SCDevKitConfig: NSObject{
     
     public var nav_height_notX_height: CGFloat = 64
     
+    public var isLogEnabled: Bool = true
+    
+    /// 钥匙串key的访问Key，全局只设定一次
+    @AssignOnce<String> public var deviceIdKey: String?
+}
+
+@propertyWrapper
+public struct AssignOnce<Type>{
+    private var value: Type?
+    
+    public var wrappedValue: Type?{
+        set{
+            if value == nil{
+                value = newValue
+            }
+        }
+        get{value}
+    }
+    
+    public init(){}
 }
 

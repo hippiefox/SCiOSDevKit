@@ -4,7 +4,6 @@ platform :ios, '12.0'
 
 target 'SCiOSDevKit_Example' do
   pod 'SCiOSDevKit', :path => '../'
-
   target 'SCiOSDevKit_Tests' do
     inherit! :search_paths
 
