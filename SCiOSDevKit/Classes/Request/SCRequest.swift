@@ -23,7 +23,7 @@ public enum SCHttpError{
 }
 
 
-typealias SCRequestCompletion = (_ result: SCResult<SCHttpResponse,SCHttpError>)->Void
+public typealias SCRequestCompletion = (_ result: SCResult<SCHttpResponse,SCHttpError>)->Void
  
 public class SCRequest<Target: SCTargetType>{
     public static func request(_ target: Target, completion: @escaping SCRequestCompletion){
