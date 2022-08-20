@@ -22,7 +22,7 @@
   "source_files": "SCiOSDevKit/Classes/**/*",
   "subspecs": [
     {
-      "name": "BaseUtil",
+      "name": "Base",
       "source_files": "SCiOSDevKit/Classes/Base/*",
       "dependencies": {
         "KeychainAccess": [
@@ -34,7 +34,7 @@
       "name": "Widget",
       "source_files": "SCiOSDevKit/Classes/Widget/*",
       "dependencies": {
-        "SCiOSDevKit/BaseUtil": [
+        "SCiOSDevKit/Base": [
 
         ],
         "SnapKit": [
@@ -45,6 +45,39 @@
     {
       "name": "Extensions",
       "source_files": "SCiOSDevKit/Classes/Extensions/*"
+    },
+    {
+      "name": "HUD",
+      "source_files": "SCiOSDevKit/Classes/HUD/*",
+      "dependencies": {
+        "MBProgressHUD": [
+
+        ],
+        "lottie-ios": [
+
+        ]
+      }
+    },
+    {
+      "name": "Request",
+      "source_files": "SCiOSDevKit/Classes/Request/*",
+      "dependencies": {
+        "Cache": [
+
+        ],
+        "Moya": [
+
+        ],
+        "GTMBase64": [
+
+        ],
+        "SCiOSDevKit/Base": [
+
+        ],
+        "SCiOSDevKit/HUD": [
+
+        ]
+      }
     }
   ],
   "swift_version": "5.0"

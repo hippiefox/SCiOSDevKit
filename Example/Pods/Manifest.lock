@@ -1,14 +1,34 @@
 PODS:
+  - Alamofire (5.6.2)
+  - Cache (6.0.0)
+  - GTMBase64 (1.0.1)
   - KeychainAccess (4.2.2)
+  - lottie-ios (3.4.2)
+  - MBProgressHUD (1.2.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
   - SCiOSDevKit (0.3.0):
-    - SCiOSDevKit/BaseUtil (= 0.3.0)
+    - SCiOSDevKit/Base (= 0.3.0)
     - SCiOSDevKit/Extensions (= 0.3.0)
+    - SCiOSDevKit/HUD (= 0.3.0)
+    - SCiOSDevKit/Request (= 0.3.0)
     - SCiOSDevKit/Widget (= 0.3.0)
-  - SCiOSDevKit/BaseUtil (0.3.0):
+  - SCiOSDevKit/Base (0.3.0):
     - KeychainAccess (~> 4.2.1)
   - SCiOSDevKit/Extensions (0.3.0)
+  - SCiOSDevKit/HUD (0.3.0):
+    - lottie-ios
+    - MBProgressHUD
+  - SCiOSDevKit/Request (0.3.0):
+    - Cache
+    - GTMBase64
+    - Moya
+    - SCiOSDevKit/Base
+    - SCiOSDevKit/HUD
   - SCiOSDevKit/Widget (0.3.0):
-    - SCiOSDevKit/BaseUtil
+    - SCiOSDevKit/Base
     - SnapKit
   - SnapKit (5.6.0)
 
@@ -17,7 +37,13 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - Cache
+    - GTMBase64
     - KeychainAccess
+    - lottie-ios
+    - MBProgressHUD
+    - Moya
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -25,8 +51,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
-  SCiOSDevKit: 2fee3a9decee6c05eb85371ecd72c9d215bcf243
+  lottie-ios: 6bbc53eef6957e4744a50321507015fba72d8ca6
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SCiOSDevKit: a58a1c7270cd4d068cf2a72fe29aed057524d538
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: 1479f876f0c6afd08ce215050318de02c23ca55d

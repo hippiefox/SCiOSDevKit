@@ -12,14 +12,14 @@ import WebKit
 private let progressKeyPath = "estimatedProgress"
 private let canGoBackKeyPath = "canGoBack"
 
-public class SCWebviewController: UIViewController {
-    public var initialTitle: String?
+open class SCWebviewController: UIViewController {
+    open var initialTitle: String?
 
-    public var progressTintColor: UIColor = .blue {
+    open var progressTintColor: UIColor = .blue {
         didSet { progressView.tintColor = progressTintColor }
     }
 
-    public var progressBGColor: UIColor = .white {
+    open var progressBGColor: UIColor = .white {
         didSet { progressView.trackTintColor = progressBGColor }
     }
 
@@ -32,7 +32,7 @@ public class SCWebviewController: UIViewController {
     private var hasShowWeb = false
 
     /// 进度条
-    public lazy var progressView: UIProgressView = {
+    open lazy var progressView: UIProgressView = {
         let progressView = UIProgressView()
         progressView.tintColor = progressTintColor
         progressView.trackTintColor = progressBGColor
@@ -40,7 +40,7 @@ public class SCWebviewController: UIViewController {
     }()
 
     /// webView
-    public lazy var webview: WKWebView = {
+    open lazy var webview: WKWebView = {
         let config = WKWebViewConfiguration()
         let webview = WKWebView(frame: .zero, configuration: config)
         webview.backgroundColor = .white
@@ -51,7 +51,7 @@ public class SCWebviewController: UIViewController {
         return webview
     }()
 
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         hasShowWeb = true
         configureUI()
@@ -59,13 +59,13 @@ public class SCWebviewController: UIViewController {
         loadUrl()
     }
 
-    public func loadUrl() {
+    open func loadUrl() {
         let url = URL(string: urlString)!
         let urlRequest = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData)
         webview.load(urlRequest)
     }
 
-    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
+    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == progressKeyPath {
             progressView.alpha = 1.0
             progressView.setProgress(Float(webview.estimatedProgress), animated: true)
@@ -94,7 +94,7 @@ public class SCWebviewController: UIViewController {
     }
 
     @available(*, unavailable)
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -132,7 +132,7 @@ extension SCWebviewController {
 extension SCWebviewController: WKUIDelegate, WKNavigationDelegate {
     // MARK: - WKNavigationDelegate
 
-    public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    open func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if let webTitle = webView.title,
            webTitle.isEmpty == false {
             title = webTitle

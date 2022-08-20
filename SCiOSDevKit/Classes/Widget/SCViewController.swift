@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-public class SCViewController: UIViewController {
-    public var sc_navigationBar: SCNavigationBar?
+open class SCViewController: UIViewController {
+    open var sc_navigationBar: SCNavigationBar?
 
-    public lazy var naviBackButton: SCButton = {
+    open lazy var naviBackButton: SCButton = {
         let button = SCButton()
         button.frame = .init(x: 0, y: 0, width: 30, height: 30)
         button.iconNormal = SCDevKitConfig.default.nav_back_image
@@ -20,14 +20,14 @@ public class SCViewController: UIViewController {
         return button
     }()
 
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = true
         initNavigationBar()
     }
 
-    public func customLeftNavigationItem(_ target: Any?, selector: Selector) -> SCBarButtonItem? {
+    open func customLeftNavigationItem(_ target: Any?, selector: Selector) -> SCBarButtonItem? {
         var leftItem: SCBarButtonItem?
         if navigationController != nil {
             leftItem = SCBarButtonItem(customView: naviBackButton)

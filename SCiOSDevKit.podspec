@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SCiOSDevKit'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'A short description of SCiOSDevKit.'
 
 # This description is used to generate tags and improve search results.
@@ -36,20 +36,36 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-    s.subspec 'BaseUtil' do |bb|
+    s.subspec 'Base' do |bb|
         bb.source_files = 'SCiOSDevKit/Classes/Base/*'
         bb.dependency 'KeychainAccess', '~> 4.2.1'
     end
     
     s.subspec 'Widget' do |ww|
         ww.source_files = 'SCiOSDevKit/Classes/Widget/*'
-        ww.dependency 'SCiOSDevKit/BaseUtil'
+        ww.dependency 'SCiOSDevKit/Base'
         ww.dependency 'SnapKit'
     end
     
     s.subspec 'Extensions' do |ee|
         ee.source_files = 'SCiOSDevKit/Classes/Extensions/*'
     end
+    
+    s.subspec 'HUD' do |hh|
+        hh.source_files = 'SCiOSDevKit/Classes/HUD/*'
+        hh.dependency 'MBProgressHUD'
+        hh.dependency 'lottie-ios'
+    end
+    
+    s.subspec 'Request' do |rr|
+        rr.source_files = 'SCiOSDevKit/Classes/Request/*'
+        rr.dependency 'Cache'
+        rr.dependency 'Moya'
+        rr.dependency 'GTMBase64'
+        rr.dependency 'SCiOSDevKit/Base'
+        rr.dependency 'SCiOSDevKit/HUD'
+    end
+
     
     
   

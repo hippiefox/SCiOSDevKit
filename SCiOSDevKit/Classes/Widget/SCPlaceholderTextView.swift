@@ -7,46 +7,46 @@
 
 import UIKit
  
-public class SCPlaceholderTextView: UIView{
+open class SCPlaceholderTextView: UIView{
     /// 0表示不限制
-    public var textLimit = 0
-    public var textInset: UIEdgeInsets = .zero{
+    open var textLimit = 0
+    open var textInset: UIEdgeInsets = .zero{
         didSet{
             layoutIfNeeded()
             setNeedsLayout()
         }
     }
     
-    public var font: UIFont = .systemFont(ofSize: 15){
+    open var font: UIFont = .systemFont(ofSize: 15){
         didSet{
             textView.font = font
             placeHolderLabel.font = font
         }
     }
     
-    public var textLimitFont: UIFont = .systemFont(ofSize: 12){
+    open var textLimitFont: UIFont = .systemFont(ofSize: 12){
         didSet{
             textLimitLabel.font = textLimitFont
         }
     }
     
-    public var textColor: UIColor = SC_COLOR(hex: "#333333"){
+    open var textColor: UIColor = SC_COLOR(hex: "#333333"){
         didSet{
             textView.textColor = textColor
         }
     }
     
-    public var placeholderColor: UIColor = SC_COLOR(hex: "#999999"){
+    open var placeholderColor: UIColor = SC_COLOR(hex: "#999999"){
         didSet{
             placeHolderLabel.textColor = placeholderColor
         }
     }
     
-    public var textLimitColor: UIColor = SC_COLOR(hex: "#999999"){
+    open var textLimitColor: UIColor = SC_COLOR(hex: "#999999"){
         didSet{}
     }
     
-    public var text: String?{
+    open var text: String?{
         get{    textView.text}
         set{
             textView.text = newValue
@@ -54,7 +54,7 @@ public class SCPlaceholderTextView: UIView{
         }
     }
     
-    public var placeholderText: String?{
+    open var placeholderText: String?{
         didSet{
             placeHolderLabel.text = placeholderText
             placeHolderLabel.isHidden = !(placeholderText?.isEmpty == false)
@@ -91,11 +91,11 @@ public class SCPlaceholderTextView: UIView{
         configureUI()
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         
         guard bounds != .zero else{ return}
@@ -122,7 +122,7 @@ extension SCPlaceholderTextView{
 }
 
 extension SCPlaceholderTextView: UITextViewDelegate{
-    public func textViewDidChange(_ textView: UITextView) {
+    open func textViewDidChange(_ textView: UITextView) {
         placeHolderLabel.isHidden = (textView.hasText == true)
         if textLimit > 0{
             var textCount = self.text?.count ?? 0

@@ -19,13 +19,13 @@ extension SCBaseAlert{
 }
 
 
-public class SCBaseAlert: UIViewController{
+open class SCBaseAlert: UIViewController{
     public let position: Position
     ///横屏时的弹窗位置
-    public var hrzPosition: Position?
-    public var tapToDismiss: Bool = true
-    public var fromColor: UIColor = .clear
-    public var toColor: UIColor = .clear
+    open var hrzPosition: Position?
+    open var tapToDismiss: Bool = true
+    open var fromColor: UIColor = .clear
+    open var toColor: UIColor = .clear
     
     public init(position: Position){
         self.position = position
@@ -34,35 +34,35 @@ public class SCBaseAlert: UIViewController{
         transitioningDelegate = self
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public lazy var contentView: UIView = {
+    open lazy var contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemPink.withAlphaComponent(0.3)
         return view
     }()
     
-    public lazy var containerView: UIView = {
+    open lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         return view
     }()
     
-    public lazy var closeButton: SCButton = {
+    open lazy var closeButton: SCButton = {
         let btn = SCButton()
         btn.addTarget(self, action: #selector(tapClose), for: .touchUpInside)
         return btn
     }()
     
-    public lazy var tap: UITapGestureRecognizer = {
+    open lazy var tap: UITapGestureRecognizer = {
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(tapSelf))
         tap.delegate = self
         return tap
     }()
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         if tapToDismiss{
             view.addGestureRecognizer(tap)
@@ -96,24 +96,24 @@ extension SCBaseAlert: UIGestureRecognizerDelegate{
         dismiss(animated: true)
     }
     
-    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         let loc = gestureRecognizer.location(in: view)
         return !containerView.frame.contains(loc)
     }
 }
 
 extension SCBaseAlert: UIViewControllerTransitioningDelegate{
-    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self
     }
     
-    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         self
     }
 }
 
 extension SCBaseAlert: UIViewControllerAnimatedTransitioning{
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let isPresenting = view.superview == nil
         let tstContainer = transitionContext.containerView
         var targetPosition = position
@@ -198,7 +198,7 @@ extension SCBaseAlert: UIViewControllerAnimatedTransitioning{
         }
     }
     
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         0.3
     }
     

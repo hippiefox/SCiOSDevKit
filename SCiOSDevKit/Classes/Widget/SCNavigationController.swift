@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-public class SCNavigationController: UINavigationController{
-    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+open class SCNavigationController: UINavigationController{
+    open override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if viewControllers.count >= 1{
             viewController.hidesBottomBarWhenPushed = true
         }
