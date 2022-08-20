@@ -26,7 +26,7 @@ public enum SCHttpError{
 typealias SCRequestCompletion = (_ result: SCResult<SCHttpResponse,SCHttpError>)->Void
  
 public class SCRequest<Target: SCTargetType>{
-    static func request(_ target: Target, completion: @escaping SCRequestCompletion){
+    public static func request(_ target: Target, completion: @escaping SCRequestCompletion){
         let url = target.baseURL.absoluteString + target.path
         let urlCacheKey = SCRequestCacheKey.keyOf(url: url, params: target.params)
         
