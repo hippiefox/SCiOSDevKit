@@ -38,6 +38,15 @@ open class SCViewController: UIViewController {
     @objc private func actionBack() {
         navigationController?.popViewController(animated: true)
     }
+    
+    open override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let sc_navigationBar = sc_navigationBar {
+            sc_navigationBar.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: SC_NAV_HEIGHT)
+            view.bringSubviewToFront(sc_navigationBar)
+        }
+    }
 
     private func initNavigationBar() {
         if let navigationController = navigationController {
