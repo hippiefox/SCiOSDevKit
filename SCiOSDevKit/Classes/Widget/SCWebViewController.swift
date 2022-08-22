@@ -110,6 +110,7 @@ open class SCWebviewController: UIViewController {
 
 extension SCWebviewController {
     private func configureUI() {
+        view.backgroundColor = .white
         view.addSubview(progressView)
         progressView.snp.makeConstraints {
             $0.left.right.equalToSuperview()

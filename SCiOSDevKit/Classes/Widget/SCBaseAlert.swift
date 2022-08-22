@@ -40,7 +40,6 @@ open class SCBaseAlert: UIViewController{
     
     open lazy var contentView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemPink.withAlphaComponent(0.3)
         return view
     }()
     
@@ -140,6 +139,7 @@ extension SCBaseAlert: UIViewControllerAnimatedTransitioning{
             switch targetPosition {
             case .center:
                 containerView.center.x = view.bounds.width / 2
+                containerView.frame.origin.y = view.bounds.height
             case .bottom:
                 let safeBottom = view.safeAreaInsets.bottom
                 containerView.frame.size.height += safeBottom
