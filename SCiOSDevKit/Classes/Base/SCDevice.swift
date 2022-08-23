@@ -23,7 +23,7 @@ public enum SCDevice{
 
     public static let deviceModel = UIDevice.current.model
 
-    public var uniqueID: String{
+    public static var uniqueID: String{
         let service = SCDevKitConfig.default.deviceIdKey ?? SCDevice.bundleId
         let keyKey = SCDevKitConfig.default.deviceIdKey ?? SCDevice.bundleId
         let kc = Keychain.init(service: service)
