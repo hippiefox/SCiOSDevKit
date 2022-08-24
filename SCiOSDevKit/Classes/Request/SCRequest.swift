@@ -11,8 +11,8 @@ import Moya
 
 
 public struct SCHttpResponse{
-    let data: [AnyHashable:Any]
-    let isCache: Bool
+    public let data: [AnyHashable:Any]
+    public let isCache: Bool
 }
 
 public enum SCHttpError{
