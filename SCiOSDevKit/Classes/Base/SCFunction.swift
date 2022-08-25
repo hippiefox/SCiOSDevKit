@@ -10,9 +10,6 @@ import Foundation
 public func sc_storage_size_format(_ bytes: Int64,
                                    unit: ByteCountFormatter.Units = .useAll, includeUnit: Bool = true)-> String
 {
-    if bytes == 0 {
-        return includeUnit ? "0b" : "0"
-    }
     let format = ByteCountFormatter()
     format.allowedUnits = unit
     format.countStyle = .binary
