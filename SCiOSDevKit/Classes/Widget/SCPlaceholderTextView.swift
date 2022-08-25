@@ -68,7 +68,6 @@ open class SCPlaceholderTextView: UIView{
         view.textColor = textColor
         view.font = font
         view.delegate = self
-        SC_ViewBorder(view, 1, .red)
         return view
     }()
     
