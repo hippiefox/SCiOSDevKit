@@ -94,7 +94,7 @@ open class SCWebviewController: SCViewController {
     }
 
     @available(*, unavailable)
-    required public init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -115,13 +115,17 @@ extension SCWebviewController {
         progressView.snp.makeConstraints {
             $0.left.right.equalToSuperview()
             $0.height.equalTo(2)
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            if let bar = self.sc_navigationBar {
+                $0.top.equalTo(bar.snp.bottom)
+            } else {
+                $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            }
         }
 
         view.addSubview(webview)
         webview.snp.makeConstraints {
             $0.left.right.equalToSuperview()
-            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            $0.bottom.equalTo(progressView.snp.bottom)
             $0.top.equalTo(progressView.snp.bottom)
         }
 
