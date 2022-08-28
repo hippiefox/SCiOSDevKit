@@ -9,10 +9,10 @@ import Foundation
 import SnapKit
 import WebKit
 
-private let progressKeyPath = "estimatedProgress"
-private let canGoBackKeyPath = "canGoBack"
+private let __progressKP = "estimatedProgress"
+private let __canGoBackKP = "canGoBack"
 
-open class SCWebviewController: UIViewController {
+open class SCWebviewController: SCViewController {
     open var initialTitle: String?
 
     open var progressTintColor: UIColor = .blue {
@@ -55,7 +55,7 @@ open class SCWebviewController: UIViewController {
         super.viewDidLoad()
         hasShowWeb = true
         configureUI()
-        title = initialTitle
+        sc_navigationBar?.title = initialTitle
         loadUrl()
     }
 
@@ -66,7 +66,7 @@ open class SCWebviewController: UIViewController {
     }
 
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == progressKeyPath {
+        if keyPath == __progressKP {
             progressView.alpha = 1.0
             progressView.setProgress(Float(webview.estimatedProgress), animated: true)
             if webview.estimatedProgress >= 1.0 {
@@ -79,7 +79,7 @@ open class SCWebviewController: UIViewController {
                     self.progressView.setProgress(0.0, animated: false)
                 }
             }
-        } else if keyPath == canGoBackKeyPath {
+        } else if keyPath == __canGoBackKP {
             if let newValue = change?[NSKeyValueChangeKey.newKey] as? Bool {
                 navigationController?.interactivePopGestureRecognizer?.isEnabled = !newValue
             } else {
@@ -102,8 +102,8 @@ open class SCWebviewController: UIViewController {
         if hasShowWeb {
             webview.uiDelegate = nil
             webview.navigationDelegate = nil
-            webview.removeObserver(self, forKeyPath: progressKeyPath)
-            webview.removeObserver(self, forKeyPath: canGoBackKeyPath)
+            webview.removeObserver(self, forKeyPath: __progressKP)
+            webview.removeObserver(self, forKeyPath: __canGoBackKP)
         }
     }
 }
@@ -125,8 +125,8 @@ extension SCWebviewController {
             $0.top.equalTo(progressView.snp.bottom)
         }
 
-        webview.addObserver(self, forKeyPath: canGoBackKeyPath, options: .new, context: nil)
-        webview.addObserver(self, forKeyPath: progressKeyPath, options: .new, context: nil)
+        webview.addObserver(self, forKeyPath: __canGoBackKP, options: .new, context: nil)
+        webview.addObserver(self, forKeyPath: __progressKP, options: .new, context: nil)
     }
 }
 
@@ -136,9 +136,9 @@ extension SCWebviewController: WKUIDelegate, WKNavigationDelegate {
     open func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if let webTitle = webView.title,
            webTitle.isEmpty == false {
-            title = webTitle
+            sc_navigationBar?.title = webTitle
         } else {
-            title = initialTitle
+            sc_navigationBar?.title = initialTitle
         }
     }
 }

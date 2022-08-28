@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 extension UIView{
@@ -19,6 +20,42 @@ public class SC_TableCell<T: UITableViewCell>{
                        indextPath: IndexPath)-> T{
         let cell = tableView.dequeueReusableCell(withIdentifier: T.sc_reuseId, for: indextPath)
         return cell as! T
+    }
+    
+    /// tableView section cell卡片式圆角
+    public static func sectionRoundRect(with tableView: UITableView,
+                                        at indexPath: IndexPath,
+                                        for cell: UITableViewCell,
+                                        bgColor: UIColor = .white,
+                                        cellRadius: CGFloat = 8)
+    {
+        let radius: CGFloat = cellRadius
+        let layer = CAShapeLayer()
+        let rowNum = tableView.numberOfRows(inSection: indexPath.section)
+        let bounds = cell.bounds
+        var path: UIBezierPath!
+
+        if indexPath.row == 0 && indexPath.row == rowNum - 1 {
+            path = UIBezierPath(roundedRect: bounds,
+                                byRoundingCorners: .allCorners,
+                                cornerRadii: .init(width: radius, height: radius))
+        } else if indexPath.row == 0 {
+            path = UIBezierPath(roundedRect: bounds,
+                                byRoundingCorners: .init(rawValue: UIRectCorner.topLeft.rawValue | UIRectCorner.topRight.rawValue),
+                                cornerRadii: .init(width: radius, height: radius))
+        } else if indexPath.row == rowNum - 1 {
+            path = UIBezierPath(roundedRect: bounds,
+                                byRoundingCorners: .init(rawValue: UIRectCorner.bottomLeft.rawValue | UIRectCorner.bottomRight.rawValue),
+                                cornerRadii: .init(width: radius, height: radius))
+        } else {
+            path = UIBezierPath(rect: bounds)
+        }
+
+        layer.path = path.cgPath
+        layer.fillColor = UIColor.white.cgColor
+        let bgView = UIView()
+        bgView.layer.insertSublayer(layer, at: 0)
+        cell.backgroundView = bgView
     }
 }
 
