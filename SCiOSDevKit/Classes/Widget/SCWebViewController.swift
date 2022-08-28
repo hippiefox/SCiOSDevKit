@@ -125,7 +125,7 @@ extension SCWebviewController {
         view.addSubview(webview)
         webview.snp.makeConstraints {
             $0.left.right.equalToSuperview()
-            $0.bottom.equalTo(progressView.snp.bottom)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
             $0.top.equalTo(progressView.snp.bottom)
         }
 
