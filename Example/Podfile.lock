@@ -5,29 +5,33 @@ PODS:
   - KeychainAccess (4.2.2)
   - lottie-ios (3.4.2)
   - MBProgressHUD (1.2.0)
+  - MJRefresh (3.7.5)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
-  - SCiOSDevKit (0.3.0):
-    - SCiOSDevKit/Base (= 0.3.0)
-    - SCiOSDevKit/Extensions (= 0.3.0)
-    - SCiOSDevKit/HUD (= 0.3.0)
-    - SCiOSDevKit/Request (= 0.3.0)
-    - SCiOSDevKit/Widget (= 0.3.0)
-  - SCiOSDevKit/Base (0.3.0):
+  - SCiOSDevKit (0.7.8):
+    - SCiOSDevKit/Base (= 0.7.8)
+    - SCiOSDevKit/Extensions (= 0.7.8)
+    - SCiOSDevKit/HUD (= 0.7.8)
+    - SCiOSDevKit/Refresh (= 0.7.8)
+    - SCiOSDevKit/Request (= 0.7.8)
+    - SCiOSDevKit/Widget (= 0.7.8)
+  - SCiOSDevKit/Base (0.7.8):
     - KeychainAccess (~> 4.2.1)
-  - SCiOSDevKit/Extensions (0.3.0)
-  - SCiOSDevKit/HUD (0.3.0):
+  - SCiOSDevKit/Extensions (0.7.8)
+  - SCiOSDevKit/HUD (0.7.8):
     - lottie-ios
     - MBProgressHUD
-  - SCiOSDevKit/Request (0.3.0):
+  - SCiOSDevKit/Refresh (0.7.8):
+    - MJRefresh
+  - SCiOSDevKit/Request (0.7.8):
     - Cache
     - GTMBase64
     - Moya
     - SCiOSDevKit/Base
     - SCiOSDevKit/HUD
-  - SCiOSDevKit/Widget (0.3.0):
+  - SCiOSDevKit/Widget (0.7.8):
     - SCiOSDevKit/Base
     - SnapKit
   - SnapKit (5.6.0)
@@ -43,6 +47,7 @@ SPEC REPOS:
     - KeychainAccess
     - lottie-ios
     - MBProgressHUD
+    - MJRefresh
     - Moya
     - SnapKit
 
@@ -57,8 +62,9 @@ SPEC CHECKSUMS:
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   lottie-ios: 6bbc53eef6957e4744a50321507015fba72d8ca6
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
-  SCiOSDevKit: a58a1c7270cd4d068cf2a72fe29aed057524d538
+  SCiOSDevKit: 0a779e0921fb14b874931d9dd63cb8c277f792d0
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: 1479f876f0c6afd08ce215050318de02c23ca55d

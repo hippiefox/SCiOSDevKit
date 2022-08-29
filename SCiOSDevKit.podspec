@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SCiOSDevKit'
-  s.version          = '0.7.7'
+  s.version          = '0.7.8'
   s.summary          = 'A short description of SCiOSDevKit.'
 
 # This description is used to generate tags and improve search results.
@@ -64,6 +64,12 @@ TODO: Add long description of the pod here.
         rr.dependency 'GTMBase64'
         rr.dependency 'SCiOSDevKit/Base'
         rr.dependency 'SCiOSDevKit/HUD'
+    end
+    
+    s.subspec 'Refresh' do |ff|
+        ff.source_files = 'SCiOSDevKit/Classes/Refresh/*'
+        ff.dependency 'MJRefresh'
+
     end
 
     

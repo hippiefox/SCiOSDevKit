@@ -43,6 +43,9 @@ class ViewController: UIViewController {
             $0.width.height.equalTo(100)
             $0.center.equalToSuperview()
         }
+        
+        print(SCDevice.language,SCDevice.localLanguage)
+        
     }
 
     override func didReceiveMemoryWarning() {

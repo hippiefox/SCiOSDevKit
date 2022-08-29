@@ -40,6 +40,12 @@ public enum SCDevice{
             return ""
         }
     }
+    
+    public static let localLanguage = Locale.preferredLanguages[0]
+    public static var language: String {
+        return Locale.preferredLanguages[0].components(separatedBy: "-").first!
+    }
+
 }
 
 
