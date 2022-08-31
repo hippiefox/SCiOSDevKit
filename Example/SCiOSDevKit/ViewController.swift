@@ -46,6 +46,17 @@ class ViewController: UIViewController {
         
         print(SCDevice.language,SCDevice.localLanguage)
         
+        
+        let target = 300
+        let ratio = 0.033
+        var balance: Double = 0
+        
+        for i in 0..<target{
+            balance = 100 * pow(1+ratio, Double(i))
+            let cur = balance * ratio
+            print(i,Int(balance),Int(cur))
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -102,7 +102,7 @@ public final class SCButton: UIControl {
             if isEnabled == false {
                 imageView.image = iconDisabled == nil ? iconNormal : iconDisabled
                 titleLabel.text = titleSelected == nil ? titleNormal : titleDisabled
-                titleLabel.textColor = titleColorSelected == nil ? titleColorNormal : titleColorDisabled
+                titleLabel.textColor = titleColorDisabled == nil ? titleColorNormal : titleColorDisabled
             } else {
                 imageView.image = iconNormal
                 titleLabel.text = titleNormal

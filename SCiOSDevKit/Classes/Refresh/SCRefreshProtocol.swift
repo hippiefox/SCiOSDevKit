@@ -38,4 +38,6 @@ public extension SCRefreshProtocol{
 open class SCRefreshViewModel{
     open var isRefreshing = true
     open var offset: Int = 0
+    
+    public init(){}
 }
