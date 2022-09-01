@@ -21,11 +21,17 @@ class ViewController: UIViewController {
         return view
     }()
     
-    private lazy var button: UIButton = {
-        let btn = UIButton()
-        btn.setTitle("touch", for: .normal)
-        btn.setTitleColor(.black, for: .normal)
-        btn.addTarget(self, action: #selector(actionTap), for: .touchUpInside)
+    private lazy var button: SCFlexibleButton = {
+        let btn = SCFlexibleButton()
+        btn.maxHeight = 40
+        btn.iconNormal = UIImage.init(named: "file_folder")
+        btn.iconSize = CGSize(width: 24, height: 24)
+        btn.gap = 10
+        btn.titleNormal = "新建文件夹"
+        btn.position = .left
+        btn.contentInset = .init(top: 0, left: 10, bottom: 0, right: 10)
+        
+        
         return btn
     }()
     
@@ -40,22 +46,10 @@ class ViewController: UIViewController {
 
         view.addSubview(button)
         button.snp.makeConstraints {
-            $0.width.height.equalTo(100)
             $0.center.equalToSuperview()
         }
         
-        print(SCDevice.language,SCDevice.localLanguage)
         
-        
-        let target = 300
-        let ratio = 0.033
-        var balance: Double = 0
-        
-        for i in 0..<target{
-            balance = 100 * pow(1+ratio, Double(i))
-            let cur = balance * ratio
-            print(i,Int(balance),Int(cur))
-        }
         
     }
 

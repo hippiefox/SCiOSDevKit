@@ -16,7 +16,7 @@ extension SCButton {
     }
 }
 
-public final class SCButton: UIControl {
+public class SCButton: UIControl {
     public var position: IconPosition = .top {
         didSet {
             setNeedsLayout()
@@ -71,12 +71,12 @@ public final class SCButton: UIControl {
 
     public var titleColorDisabled: UIColor?
 
-    private lazy var imageView: UIImageView = {
+    public lazy var imageView: UIImageView = {
         let view = UIImageView()
         return view
     }()
 
-    private lazy var titleLabel: UILabel = {
+    public lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = titleFont
         return label
