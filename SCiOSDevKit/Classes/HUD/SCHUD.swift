@@ -28,13 +28,15 @@ public class SCHUD: MBProgressHUD {
     public static func showText(_ text: String,
                                 offset: CGPoint = .zero,
                                 onView superView: UIView? = nil,
-                                delay: Double = 2.0) -> SCHUD
+                                delay: Double = 2.0,
+                                isExclusive: Bool = false) -> SCHUD
     {
         let hud = SCHUD.__showHUD(to: superView)
         hud.mode = .text
         hud.label.text = text
         hud.offset = offset
         hud.hide(animated: true, afterDelay: delay)
+        hud.isUserInteractionEnabled = isExclusive
         return hud
     }
 
