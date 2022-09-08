@@ -61,7 +61,7 @@ open class SCPlaceholderTextView: UIView{
         }
     }
     
-    private lazy var textView: UITextView = {
+    public lazy var textView: UITextView = {
         let view = UITextView()
         view.showsVerticalScrollIndicator = false
         view.showsHorizontalScrollIndicator = false

@@ -4,7 +4,12 @@
 //
 //  Created by Simon Chow on 08/17/2022.
 //  Copyright (c) 2022 Simon Chow. All rights reserved.
-//
+/*
+ setNeedLayout
+ layoutIfNeed 立即更新
+ 
+ 
+ */
 
 import UIKit
 import SnapKit
@@ -28,17 +33,19 @@ class ViewController: UIViewController {
         btn.iconSize = CGSize(width: 24, height: 24)
         btn.gap = 10
         btn.titleNormal = "新建文件夹"
+        btn.titleSelected = "这是一个比较长的名字"
         btn.position = .left
         btn.contentInset = .init(top: 0, left: 10, bottom: 0, right: 10)
-        
-        
+        btn.addTarget(self, action: #selector(actionTap(_:)), for: .touchUpInside)
+        btn.backgroundColor = .systemPink
         return btn
     }()
     
-    @objc private func actionTap(){
-        let alert = SCBaseAlert.init(position: .bottom)
-        alert.hrzPosition = .right
-        present(alert, animated: true)
+    @objc private func actionTap(_ sender: UIControl){
+        
+        sender.isSelected = !sender.isSelected
+        
+        
     }
 
     override func viewDidLoad() {
@@ -46,11 +53,9 @@ class ViewController: UIViewController {
 
         view.addSubview(button)
         button.snp.makeConstraints {
-            $0.center.equalToSuperview()
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(100)
         }
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
