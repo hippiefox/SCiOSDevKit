@@ -41,22 +41,12 @@ class ViewController: UIViewController {
         return btn
     }()
     
-    private lazy var fooButton: UIButton = {
-        let btn = UIButton()
-        btn.addTarget(self, action: #selector(tapFoo), for: .touchUpInside)
-        return btn
-    }()
-    
-    @objc private func tapFoo(){
-        
-    }
-    
     @objc private func actionTap(_ sender: UIControl){
         
         sender.isSelected = !sender.isSelected
         
-        let hud = SCHUD.show()
-        hud.isUserInteractionEnabled = false
+        
+        
     }
 
     override func viewDidLoad() {

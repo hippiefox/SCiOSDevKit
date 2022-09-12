@@ -366,6 +366,7 @@
 		CEBFFEED65D877702B2F36102528CF6D /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD42E49279EE8B66C89A4C2F983FC4C /* EventMonitor.swift */; };
 		CEE5D12356C49894D06373243C37FC4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7755EC0B3BC3A7110CFC1235E82BF68D /* UIKit.framework */; };
 		CF88C7844ECE66269B757BBA5C38C5C2 /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3159AACA04F4CF1B12F7BDB014BFA34E /* TextCompositionLayer.swift */; };
+		CFE251D328CEC77C0073FEAF /* SCImageTextOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE251D228CEC77B0073FEAF /* SCImageTextOption.swift */; };
 		D0038F642442AAE53C12ECA3240B5A6D /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 350C5B10125081FBF7A74F72707304C7 /* MJRefreshAutoNormalFooter.m */; };
 		D0665D6E3CD34DD382F7E85551753C0A /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8234A74D2E72CBCC7E0C7D4298D66E65 /* MJRefreshBackGifFooter.m */; };
 		D0EA90FBF83350C49E6EF6C8A98D6F00 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9ECE8FB49021CAA13A784AE45309DB /* AFError.swift */; };
@@ -724,7 +725,7 @@
 		3F63C86D8BC29E5F4B62AB02E3E75E42 /* SCBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SCBarButtonItem.swift; sourceTree = "<group>"; };
 		3FBF1C0B8869B6EEDFE9544C5F069EFA /* GTMBase64-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMBase64-umbrella.h"; sourceTree = "<group>"; };
 		4013642A0C8052262231357FDBDF65A1 /* MaskCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskCompositionLayer.swift; path = Sources/Private/CoreAnimation/Layers/MaskCompositionLayer.swift; sourceTree = "<group>"; };
-		410DBEF854CB4790C04C402FECA6270B /* SCiOSDevKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SCiOSDevKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		410DBEF854CB4790C04C402FECA6270B /* SCiOSDevKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SCiOSDevKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		411190B9F15888F971F21FD67030ED1A /* UnitBezier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnitBezier.swift; path = Sources/Private/Utility/Primitives/UnitBezier.swift; sourceTree = "<group>"; };
 		41A7EC9F97701C232C791B47BCE39946 /* StrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/RenderNodes/StrokeNode.swift; sourceTree = "<group>"; };
 		41C33C8C7839947AE8DB4E62FC3E7FE0 /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshNormalHeader.m; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.m; sourceTree = "<group>"; };
@@ -930,7 +931,7 @@
 		9C292429BECD483FBCDA0B54EF617E7D /* LayerModel+makeAnimationLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LayerModel+makeAnimationLayer.swift"; path = "Sources/Private/CoreAnimation/Layers/LayerModel+makeAnimationLayer.swift"; sourceTree = "<group>"; };
 		9D11155D9FFBAF6ACAEA4EB7DF6070AE /* TextDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDocument.swift; path = Sources/Private/Model/Text/TextDocument.swift; sourceTree = "<group>"; };
 		9D1CEAF9F2664D21E9D74A6308103781 /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Sources/Moya/Endpoint.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DDF0D8223538BB9F9629A154F14EEB6 /* Pods-SCiOSDevKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SCiOSDevKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9E122F26CAFAA1D46F3F653A5CDAED27 /* ImageCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCompositionLayer.swift; path = Sources/Private/MainThread/LayerContainers/CompLayers/ImageCompositionLayer.swift; sourceTree = "<group>"; };
 		9E912DC0D42A3C00EEEF964A3169157E /* SCiOSDevKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCiOSDevKit; path = SCiOSDevKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -938,7 +939,7 @@
 		A0AAF1FE2EC8EB3C5CCDF4590433D51E /* BundleImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleImageProvider.swift; path = Sources/Public/iOS/BundleImageProvider.swift; sourceTree = "<group>"; };
 		A0F338A8303BD3A0BAE008E079CE887D /* Merge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Merge.swift; path = Sources/Private/Model/ShapeItems/Merge.swift; sourceTree = "<group>"; };
 		A1407A4D7B1B8E1F24270370E0189F82 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = Sources/Private/Utility/Primitives/ColorExtension.swift; sourceTree = "<group>"; };
-		A19C43BA5CFFDBF90C30237153448DFB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A19C43BA5CFFDBF90C30237153448DFB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A19F37F98C9E82AD7F5EC031526A1165 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJRefresh.h"; path = "MJRefresh/UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
 		A1D28AE5E7DE0AE6A9C3F4B0652D385B /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		A31BC175B82EBE716CCBF38E6DBA90E3 /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = Sources/Public/iOS/Compatibility/CompatibleAnimationView.swift; sourceTree = "<group>"; };
@@ -1022,6 +1023,7 @@
 		CBEE5944E486F9255A37CA73F6CAA9C0 /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeInterpolator.swift; path = Sources/Private/Utility/Interpolatable/KeyframeInterpolator.swift; sourceTree = "<group>"; };
 		CDFB01ED88A3D7E38152CCCDFC5275A8 /* Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bundle.swift; path = Sources/Private/Model/Extensions/Bundle.swift; sourceTree = "<group>"; };
 		CFBECC1C4C868AFE6E3D8A5063E43898 /* LayerDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerDebugging.swift; path = Sources/Private/Utility/Debugging/LayerDebugging.swift; sourceTree = "<group>"; };
+		CFE251D228CEC77B0073FEAF /* SCImageTextOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCImageTextOption.swift; sourceTree = "<group>"; };
 		D184F63370018D6538A6D073720F8591 /* Transformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transformer.swift; path = Source/Shared/Library/Transformer.swift; sourceTree = "<group>"; };
 		D259767A006921DB483D576A9EF317D7 /* KeyframeData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeData.swift; path = Sources/Private/Model/Keyframes/KeyframeData.swift; sourceTree = "<group>"; };
 		D28423ACDD6C4B3EC8EA782E384AA458 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
@@ -1077,7 +1079,7 @@
 		EC0CBE3E5BCEAE230228E28459C5BA1F /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		EC22FD5FC6FA53068CA9CA670FE99818 /* DashPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DashPattern.swift; path = Sources/Private/Model/Objects/DashPattern.swift; sourceTree = "<group>"; };
 		EC2524D34F4B00E944FEE46C217F57D2 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
-		EC375935FB23FA8ABEF505898EAE6C21 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		EC375935FB23FA8ABEF505898EAE6C21 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ECF2254155DA8FE22DA011BA3E56E801 /* AssetLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetLibrary.swift; path = Sources/Private/Model/Assets/AssetLibrary.swift; sourceTree = "<group>"; };
 		ED17C2F59FF2A295046DDDD7D281A576 /* GTMBase64.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GTMBase64.modulemap; sourceTree = "<group>"; };
 		EE3E57C67786ADA9BC14C1FB322D5D1E /* StorageAware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StorageAware.swift; path = Source/Shared/Storage/StorageAware.swift; sourceTree = "<group>"; };
@@ -1225,7 +1227,6 @@
 				9637656F77D24F908C64F5A9F02EDEE8 /* Core */,
 				EE4E34349C3CB327311E64A255E4F2E2 /* Support Files */,
 			);
-			name = Moya;
 			path = Moya;
 			sourceTree = "<group>";
 		};
@@ -1314,7 +1315,6 @@
 				DA858AAB538E8AA1CB1CA34729EE9BF8 /* Resources */,
 				45F1C0D39414F4E84215804A507BC251 /* Support Files */,
 			);
-			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -1324,7 +1324,6 @@
 				D4DA62794F5CC45648186CEB6C8A1E29 /* Keychain.swift */,
 				6D412C4124FFAD5E46804B473DFA6EE7 /* Support Files */,
 			);
-			name = KeychainAccess;
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
@@ -1396,7 +1395,6 @@
 				3EF9D76296B74B1EF6F70A2F919E4EC1 /* UIImage+Extensions.swift */,
 				114B517D021C7EC945E5AC315239E3BE /* Support Files */,
 			);
-			name = Cache;
 			path = Cache;
 			sourceTree = "<group>";
 		};
@@ -1416,7 +1414,6 @@
 				F5D5EF4B2E9444F632598020284C74FA /* MBProgressHUD.m */,
 				9302E4F9255D130F810AFB87936008C1 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1537,7 +1534,6 @@
 				69D3B948FBA6E381E101AA4390621DF3 /* Validation.swift */,
 				15845023B845B601062821441BCC5D73 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1713,7 +1709,6 @@
 				5ECC2FC2A71EBC7952E28B51E39E7769 /* UILayoutSupport+Extensions.swift */,
 				D4B85244CB932C1071A383F9C23D4B20 /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -1725,7 +1720,6 @@
 				6B619BA2B9654FEEFA5D7BDCB9CA5787 /* GTMDefines.h */,
 				9C64DFF51C5E860CABC59C738AD0BAD7 /* Support Files */,
 			);
-			name = GTMBase64;
 			path = GTMBase64;
 			sourceTree = "<group>";
 		};
@@ -1914,7 +1908,6 @@
 				24D3AA850DEAD9CE43E15CBB7DDE1247 /* VisibilityAnimation.swift */,
 				FEA37E78617A4160A0B1BF9EF4E93980 /* Support Files */,
 			);
-			name = "lottie-ios";
 			path = "lottie-ios";
 			sourceTree = "<group>";
 		};
@@ -1938,6 +1931,7 @@
 				91BE8B71D75F94FBE5EC402A115BA503 /* SCFunction.swift */,
 				68F4BFA5ADADCFE57AE66E2377D14779 /* SCLocalized.swift */,
 				79C2A7748950DF6F6F72D438C3D4B279 /* SCSize.swift */,
+				CFE251D228CEC77B0073FEAF /* SCImageTextOption.swift */,
 			);
 			name = Base;
 			path = SCiOSDevKit/Classes/Base;
@@ -2972,6 +2966,7 @@
 				E2240B09EB19AE242D662CA21DAD620C /* SCRequestCacheKey.swift in Sources */,
 				C7B0E446D59B6D19AF64F27EECF8F122 /* SCRequestCacheModel.swift in Sources */,
 				D65A8B1ABFE9D494C6A366F298AC2D2A /* SCSize.swift in Sources */,
+				CFE251D328CEC77C0073FEAF /* SCImageTextOption.swift in Sources */,
 				4E463653C678A5778E4B19D10552EE98 /* SCTargetType.swift in Sources */,
 				E44C72AFD3DF85BA617EC7DD8E74ED5C /* SCViewController.swift in Sources */,
 				E49EB806F7801A674A00688A977957AB /* SCWebViewController.swift in Sources */,
@@ -3563,8 +3558,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
