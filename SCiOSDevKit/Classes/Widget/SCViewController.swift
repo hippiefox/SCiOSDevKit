@@ -35,7 +35,7 @@ open class SCViewController: UIViewController {
         return leftItem
     }
 
-    @objc private func actionBack() {
+    @objc func actionBack() {
         navigationController?.popViewController(animated: true)
     }
     

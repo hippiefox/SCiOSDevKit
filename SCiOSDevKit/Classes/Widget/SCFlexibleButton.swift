@@ -23,8 +23,19 @@ public class SCFlexibleButton: SCButton {
             }
         }
     }
+    
+    public override var titleNormal: String?{
+        didSet{
+            if oldValue != nil,
+                titleNormal != oldValue
+            {
+                invalidateIntrinsicContentSize()
+            }
+        }
+    }
 
     override public var intrinsicContentSize: CGSize {
+        
         var text = titleNormal ?? ""
         
         if isSelected && titleSelected != nil{

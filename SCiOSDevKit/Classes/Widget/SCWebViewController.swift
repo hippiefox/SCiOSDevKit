@@ -23,13 +23,16 @@ open class SCWebviewController: SCViewController {
         didSet { progressView.trackTintColor = progressBGColor }
     }
 
-    public init(urlString: String) {
+    public init(urlString: String, msgs: [String] = []) {
         self.urlString = urlString
+        self.msgs = msgs
         super.init(nibName: nil, bundle: nil)
     }
 
-    private let urlString: String
+    public let urlString: String
+    private var msgs: [String] = []
     private var hasShowWeb = false
+    public var isForbidAutoBack = false
 
     /// 进度条
     open lazy var progressView: UIProgressView = {
@@ -42,6 +45,16 @@ open class SCWebviewController: SCViewController {
     /// webView
     open lazy var webview: WKWebView = {
         let config = WKWebViewConfiguration()
+        if msgs.isEmpty == false {
+            let preference = WKPreferences()
+            preference.javaScriptCanOpenWindowsAutomatically = true
+            preference.javaScriptEnabled = true
+            config.preferences = preference
+            msgs.forEach {
+                config.userContentController.add(self, name: $0)
+            }
+        }
+
         let webview = WKWebView(frame: .zero, configuration: config)
         webview.backgroundColor = .white
         webview.scrollView.showsVerticalScrollIndicator = false
@@ -65,6 +78,10 @@ open class SCWebviewController: SCViewController {
         webview.load(urlRequest)
     }
 
+    open func handMsg(name: String, body: Any?) {
+        // void impementation
+    }
+
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == __progressKP {
             progressView.alpha = 1.0
@@ -80,6 +97,9 @@ open class SCWebviewController: SCViewController {
                 }
             }
         } else if keyPath == __canGoBackKP {
+            if isForbidAutoBack {
+                return
+            }
             if let newValue = change?[NSKeyValueChangeKey.newKey] as? Bool {
                 navigationController?.interactivePopGestureRecognizer?.isEnabled = !newValue
             } else {
@@ -90,12 +110,30 @@ open class SCWebviewController: SCViewController {
 
     override open func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        if isForbidAutoBack {
+            navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        }
+    }
+
+    override open func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if isForbidAutoBack {
+            navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        }
     }
 
     @available(*, unavailable)
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override open func actionBack() {
+        if msgs.isEmpty == false {
+            msgs.forEach {
+                webview.configuration.userContentController.removeScriptMessageHandler(forName: $0)
+            }
+        }
+        super.actionBack()
     }
 
     deinit {
@@ -105,6 +143,14 @@ open class SCWebviewController: SCViewController {
             webview.removeObserver(self, forKeyPath: __progressKP)
             webview.removeObserver(self, forKeyPath: __canGoBackKP)
         }
+    }
+}
+
+extension SCWebviewController: WKScriptMessageHandler {
+    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        let name = message.name
+        let body = message.body
+        handMsg(name: name, body: body)
     }
 }
 
