@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SCiOSDevKit'
-  s.version          = '0.8.2'
+  s.version          = '0.8.3'
   s.summary          = 'A short description of SCiOSDevKit.'
 
 # This description is used to generate tags and improve search results.
